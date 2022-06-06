@@ -22,3 +22,6 @@ Move to a spot either left or right of where your first threw an eye to where th
 Once the estimated coordinates are given, travel to those coordinates and throw another eye. If you are in creative mode, use the command /locate #minecraft:stronghold to see how close you are to the nearest stronghold.\
 ![image](https://user-images.githubusercontent.com/56609280/172198715-144b11af-dd8a-4117-8005-5d51fa3849b2.png)
 ![image](https://user-images.githubusercontent.com/56609280/172198752-d4a2711b-5c26-450c-b957-b6d2518525d5.png)
+
+## Credits and Warning
+The equations above were created by samkomododragon on Discord. I was given permission to code these equations in C++ and run them in a Linux terminal. Please remember that the coordinates calculated are not 100% exact, but majority of tests have shown the distance between the estimated position and the exact position of the stronghold is very low.
