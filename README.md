@@ -24,4 +24,8 @@ Once the estimated coordinates are given, travel to those coordinates and throw 
 ![image](https://user-images.githubusercontent.com/56609280/172198752-d4a2711b-5c26-450c-b957-b6d2518525d5.png)
 
 ## Credits and Warning
-The equations above were created by samkomododragon on Discord. I was given permission to code these equations in C++ and run them in a Linux terminal. Please remember that the coordinates calculated are not 100% exact, but majority of tests have shown the distance between the estimated position and the exact position of the stronghold is very low.
+The equations above were created by samkomododragon on Discord. I was given permission to code these equations in C++ and run them in a Linux terminal. Please remember that the coordinates calculated are not 100% exact, but majority of tests have shown the distance between the estimated position and the exact position of the stronghold is very low.\
+
+## Questions
+Q: What if I want to run just the binary file?\
+A: If you are going to run the binary executable, it is best to use a Ubuntu terminal. You can use either your virtual machine (VM) or use Ubuntu for Windows by downloading it in the Microsoft Store (it's free).
