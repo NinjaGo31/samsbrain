@@ -1,9 +1,9 @@
 #include <iostream>
-#include <math.h>
+#include <cmath>
 using namespace std;
 
 double degrees_to_radians (double deg) {
-    double rad = deg * (M_PI/180);
+    double rad = deg * ((2*acos(0.0))/180);
     return rad;
 }
 
