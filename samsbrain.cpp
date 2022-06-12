@@ -1,16 +1,25 @@
 #include <iostream>
-#include <cmath>
+#include <math.h>
 using namespace std;
 
 double degrees_to_radians (double deg) {
-    double rad = deg * ((2*acos(0.0))/180);
+    double rad = deg * (M_PI/180);
     return rad;
+}
+
+double cot (double deg) {
+    if (deg == 0.0 || deg == 180.0) {
+        cout << "Error: Tangent of 0.0 and 180.0 degrees is zero.\nConsider adding a 0.01 to get results.\n";
+        exit(1);
+    }
+    double rad = degrees_to_radians(deg);
+    return 1/tan(rad);
 }
 
 int main() {
     static double x1, x2;
     static double z1, z2;
-    static double angle1, angle2, rad1, rad2;
+    static double angle1, angle2;
 
     cout << endl << "********** Sam's Brain **********" << endl;
     cout << "You may enter numbers up to 3 decimals." << endl;
@@ -28,7 +37,6 @@ int main() {
     cout << "Enter Angle 1: ";
     cin >> angle1;
     cout << endl;
-    rad1 = degrees_to_radians(angle1);
 
     cout << "Enter x2: ";
     cin >> x2;
@@ -41,10 +49,9 @@ int main() {
     cout << "Enter Angle 2: ";
     cin >> angle2;
     cout << endl;
-    rad2 = degrees_to_radians(angle2);
 
-    double x = (z1 - z2 + (1/tan(rad1)) * x1 - (1/tan(rad2)) * x2) / ((1/tan(rad1)) - (1/tan(rad2)));
-    double z = -(1/tan(rad1)) * (x - x1) + z1;
+    double x = (z1 - z2 + cot(angle1) * x1 - cot(angle2) * x2) / (cot(angle1) - cot(angle2));
+    double z = -(cot(angle1)) * (x - x1) + z1;
 
     cout << "Estimated x coordinate: " << x << endl;
     cout << "Estimated z coordinate: " << z << endl;
